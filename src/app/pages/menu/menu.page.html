@@ -1,0 +1,81 @@
+<ion-header>
+
+    <ion-toolbar color="dark">
+        <ion-title>Menú</ion-title>
+        <ion-button (click)="regresar()" slot="end">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+
+</ion-header>
+
+
+
+
+
+<ion-content>
+
+
+
+    <ion-list>
+
+        <ion-item (click)="irPerfil()">
+            <ion-label>Perfil</ion-label>
+            <img class="icon" src="assets/icon/profile.svg">
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Propuesta de ley</ion-label>
+            <img class="icon" src="assets/icon/invoice.svg">
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Configuración</ion-label>
+            <img class="icon" src="assets/icon/config.svg">
+        </ion-item>
+
+    </ion-list>
+
+
+
+    <ion-grid>
+        <ion-row>
+
+            <ion-col size="6">
+                <div class="box-opcion">
+                    <ion-badge color="primary">Escanear Arbol</ion-badge>
+                    <br>
+                    <ion-button color="dark" (click)="scan()">
+                        <img src="assets/icon/qr-code.svg">
+                    </ion-button>
+                </div>
+            </ion-col>
+
+            <ion-col size="6">
+                <div class="box-opcion">
+                    <ion-badge color="primary">Mapa de Arboles</ion-badge>
+                    <br>
+                    <ion-button color="dark" (click)="verMapa()">
+                        <img src="assets/icon/map.svg">
+                    </ion-button>
+                </div>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="12" class="center">
+                <ion-button>Ver registros</ion-button>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+
+
+    <p>Info: {{ infoQr }}</p>
+    <p>Error: {{ errorQr }}</p>
+
+
+
+</ion-content>

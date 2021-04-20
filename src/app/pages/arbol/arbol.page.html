@@ -1,0 +1,84 @@
+<ion-content [fullscreen]="true" class="fondo">
+
+
+
+    <div class="velo"></div>
+
+
+
+    <!-- Card de mi arbol -->
+    <ion-card class="card-arbol">
+        <img [src]="datosArbol.imagen">
+        <ion-card-header>
+            <ion-card-title> {{ datosArbol.nombre }} </ion-card-title>
+            <ion-card-subtitle> {{ datosArbol.nombreCientifico }} </ion-card-subtitle>
+        </ion-card-header>
+    </ion-card>
+    <!-- Card de mi arbol -->
+
+
+
+    <!-- Estadisticas -->
+    <ion-grid>
+        <ion-row>
+
+
+            <!-- Fecha -->
+            <ion-col size="6">
+                <ion-card class="box">
+                    <ion-card-content>
+                        <div>
+                            <ion-card-subtitle>Fecha de nacimiento</ion-card-subtitle>
+                            <ion-card-title> {{ datosArbol.fecha }} </ion-card-title>
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+
+            <!-- Tiempo -->
+            <ion-col size="6">
+                <ion-card class="box">
+                    <ion-card-content>
+                        <div>
+                            <ion-card-subtitle>Tiempo de vida</ion-card-subtitle>
+                            <ion-card-title> {{ datosArbol.tiempo }} días</ion-card-title>
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+
+            <!-- Código -->
+            <ion-col size="6">
+                <ion-card class="box">
+                    <ion-card-content>
+                        <div>
+                            <ion-card-subtitle>Código único</ion-card-subtitle>
+                            <ion-card-title>#{{ datosArbol.codigo }}</ion-card-title>
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+
+            <!-- QR -->
+            <ion-col size="6">
+                <ion-card class="box">
+                    <ion-card-content>
+                        <div>
+                            <img class="miqrcode" src="assets/miqrcode.svg">
+                        </div>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+
+
+        </ion-row>
+    </ion-grid>
+    <!-- Estadisticas -->
+
+
+
+</ion-content>

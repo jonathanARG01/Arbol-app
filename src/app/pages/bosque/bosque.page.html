@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true" class="fondo">
+
+
+    <div class="velo"></div>
+
+
+
+    <!-- Refresher -->
+    <ion-refresher slot="fixed" (ionRefresh)="recargar($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+
+
+
+    <app-posts [posts]="posts"></app-posts>
+    <!-- Card del post -->
+
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+
+        <ion-fab-button (click)="crearPost()">
+            <img class="icon img-post" src="assets/icon/add-post.svg">
+        </ion-fab-button>
+
+    </ion-fab>
+
+
+
+    <!-- Infiniti scroll -->
+    <ion-infinite-scroll [disabled]="!habilitado" threshold="150px" (ionInfinite)="siguientes($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+
+
+
+</ion-content>

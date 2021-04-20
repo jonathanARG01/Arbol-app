@@ -1,0 +1,20 @@
+.box-opcion {
+    text-align: center;
+    margin: 60px 0;
+    ion-button {
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+        .button-native {
+            padding: 0;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+ion-item {
+    cursor: pointer;
+}
