@@ -13,6 +13,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { Camera } from '@ionic-native/camera/ngx';
 		{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
 		BarcodeScanner,
 		Geolocation,
-		Camera
+		Camera,
+		FileTransfer
 	],
 	bootstrap: [
 		AppComponent

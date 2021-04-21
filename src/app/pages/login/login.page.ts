@@ -91,18 +91,24 @@ export class LoginPage implements OnInit {
 	}
 
 
+    // login() {
+
+    //     this.navCtrl.navigateRoot('/main/tabs/arbol', { animated: true });
+
+	// }
+
+
 	async login( fLogin: NgForm ) {
 
-        this.navCtrl.navigateRoot('/main/tabs/arbol', { animated: true });
-		// if ( fLogin.invalid ) { return;	}
+		if ( fLogin.invalid ) { return;	}
 
-		// const valido = await this.usuarioService.login( this.loginUser.email, this.loginUser.password );
+		const valido = await this.usuarioService.login( this.loginUser.email, this.loginUser.password );
 
-		// if ( valido ) {
-		// 	this.navCtrl.navigateRoot('/main/tabs/arbol', { animated: true });
-		// } else {
-		// 	this.uiService.alertaInformativa('Usuario y/o contraseña no son correctos');
-		// }
+		if ( valido ) {
+			this.navCtrl.navigateRoot('/main/tabs/arbol', { animated: true });
+		} else {
+			this.uiService.alertaInformativa('Usuario y/o contraseña no son correctos');
+		}
 	
 	}
 

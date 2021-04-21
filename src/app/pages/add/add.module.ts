@@ -7,14 +7,23 @@ import { IonicModule } from '@ionic/angular';
 import { AddPageRoutingModule } from './add-routing.module';
 
 import { AddPage } from './add.page';
+import { PipesModule } from '../../pipes/pipes.module';
+
+
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AddPageRoutingModule
-  ],
-  declarations: [AddPage]
+	imports: [
+		CommonModule,
+		FormsModule,
+		IonicModule,
+		PipesModule,
+		AddPageRoutingModule
+	],
+	declarations: [
+		AddPage
+	]
 })
+
+
+
 export class AddPageModule {}

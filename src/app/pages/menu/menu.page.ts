@@ -9,6 +9,8 @@ import { RegistrosService } from '../../services/registros.service';
 
 // Pages
 import { PerfilPage } from '../perfil/perfil.page';
+import { UsuarioService } from '../../services/usuario.service';
+import { PostsService } from '../../services/posts.service';
 
 
 
@@ -25,7 +27,9 @@ export class MenuPage {
 	
 	constructor( private modalController: ModalController,
 				 private barcodeScanner: BarcodeScanner,
-				 private registro: RegistrosService ) { }
+				 private registro: RegistrosService,
+				 private usuarioService: UsuarioService,
+				 private postsService: PostsService ) { }
 
 
 	regresar() {
@@ -75,6 +79,14 @@ export class MenuPage {
 
 		return await modal.present();
 	
+	}
+
+
+	logout() {
+
+		this.postsService.paginaPosts = 0;
+		this.modalController.dismiss();
+		this.usuarioService.logout();
 	}
 
 

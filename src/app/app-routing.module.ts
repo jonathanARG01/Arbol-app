@@ -21,16 +21,8 @@ const routes: Routes = [
 	{
 		path: '**',
     	pathMatch: 'full',
-    	redirectTo: 'main/tabs/arbol'  
+    	redirectTo: 'main/tabs/arbol'
 	},
-  	{	
-    	path: 'perfil',
-    	loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
-  	},
-  	{
-    	path: 'ley',
-    	loadChildren: () => import('./pages/ley/ley.module').then( m => m.LeyPageModule)
-  	},
   	{
     	path: 'add',
     	loadChildren: () => import('./pages/add/add.module').then( m => m.AddPageModule)
